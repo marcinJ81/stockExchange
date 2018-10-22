@@ -1,0 +1,6 @@
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\Test_StockExchange\bin\Debug\Test_StockExchange.dll
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\Test_StockExchange\bin\Debug\Test_StockExchange.pdb
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\Test_StockExchange\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.csprojResolveAssemblyReference.cache
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.dll
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.pdb

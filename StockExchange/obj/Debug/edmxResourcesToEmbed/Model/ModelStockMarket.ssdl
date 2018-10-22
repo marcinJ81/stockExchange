@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StockExchangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BuyingSelling">
+    <Key>
+      <PropertyRef Name="bs_id" />
+    </Key>
+    <Property Name="bs_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bs_action" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MarketSquare">
+    <Key>
+      <PropertyRef Name="mark_id" />
+    </Key>
+    <Property Name="mark_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stock_id" Type="int" />
+    <Property Name="wal_id" Type="int" />
+    <Property Name="mark_numberOfShares" Type="int" />
+    <Property Name="mark_aktywny" Type="bit" />
+    <Property Name="mark_sharePriceBuy" Type="money" />
+    <Property Name="bs_id" Type="int" />
+    <Property Name="mark_sharePriceSell" Type="money" />
+    <Property Name="mark_dataStart" Type="datetime" />
+    <Property Name="mark_dataEnd" Type="datetime" />
+    <Property Name="mark_TransactionPrice" Type="money" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="stock_id" />
+    </Key>
+    <Property Name="stock_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stockN_id" Type="int" />
+    <Property Name="stock_maxCount" Type="int" />
+    <Property Name="stock_minCount" Type="int" />
+    <Property Name="stock_count" Type="int" />
+    <Property Name="stock_aktywny" Type="bit" />
+    <Property Name="stock_pricie" Type="money" />
+    <Property Name="stock_date" Type="datetime" />
+    <Property Name="stock_priceOne" Type="money" />
+    <Property Name="stock_seria" Type="varchar" MaxLength="50" />
+    <Property Name="stock_priceBuy" Type="money" />
+    <Property Name="stock_pricaeSell" Type="money" />
+  </EntityType>
+  <EntityType Name="StockName">
+    <Key>
+      <PropertyRef Name="stockN_id" />
+    </Key>
+    <Property Name="stockN_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stockN_name" Type="varchar" MaxLength="10" />
+    <Property Name="stockN_aktywny" Type="bit" />
+    <Property Name="stockN_fullName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="usr_id" />
+    </Key>
+    <Property Name="usr_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usr_name" Type="varchar" MaxLength="50" />
+    <Property Name="usr_sname" Type="varchar" MaxLength="50" />
+    <Property Name="usr_login" Type="varchar" MaxLength="50" />
+    <Property Name="usr_pass" Type="varchar" MaxLength="200" />
+    <Property Name="usr_date" Type="datetime" />
+    <Property Name="usr_aktywny" Type="bit" />
+    <Property Name="wal_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Wallet">
+    <Key>
+      <PropertyRef Name="wal_id" />
+    </Key>
+    <Property Name="wal_id" Type="int" Nullable="false" />
+    <Property Name="wal_aktywny" Type="bit" />
+    <Property Name="wal_numberOfShares" Type="int" />
+    <Property Name="wal_MoneyLimit" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'StockExchange.dbo.vMarketSquareWithoutWallet' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vMarketSquareWithoutWallet">
+          <Property Name="mark_numberOfShares" Type="int" />
+          <Property Name="mark_sharePriceBuy" Type="money" />
+          <Property Name="mark_sharePriceSell" Type="money" />
+          <Property Name="mark_TransactionPrice" Type="money" />
+          <Property Name="bs_action" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'StockExchange.dbo.vMarketSuare' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vMarketSuare">
+          <Property Name="usr_login" Type="varchar" MaxLength="50" />
+          <Property Name="stockN_name" Type="varchar" MaxLength="10" />
+          <Property Name="mark_numberOfShares" Type="int" />
+          <Property Name="mark_sharePriceBuy" Type="money" />
+          <Property Name="mark_sharePriceSell" Type="money" />
+          <Property Name="mark_TransactionPrice" Type="money" />
+          <Property Name="bs_action" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'StockExchange.dbo.vUserWallet' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="vUserWallet">
+          <Property Name="usr_login" Type="varchar" MaxLength="50" />
+          <Property Name="wal_numberOfShares" Type="int" />
+          <Property Name="wal_MoneyLimit" Type="money" />
+        </EntityType>-->
+  <Association Name="FK_BuyingSelling">
+    <End Role="BuyingSelling" Type="Self.BuyingSelling" Multiplicity="0..1" />
+    <End Role="MarketSquare" Type="Self.MarketSquare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuyingSelling">
+        <PropertyRef Name="bs_id" />
+      </Principal>
+      <Dependent Role="MarketSquare">
+        <PropertyRef Name="bs_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock">
+    <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
+    <End Role="MarketSquare" Type="Self.MarketSquare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="stock_id" />
+      </Principal>
+      <Dependent Role="MarketSquare">
+        <PropertyRef Name="stock_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockName">
+    <End Role="StockName" Type="Self.StockName" Multiplicity="0..1" />
+    <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockName">
+        <PropertyRef Name="stockN_id" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="stockN_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Wallet">
+    <End Role="Wallet" Type="Self.Wallet" Multiplicity="0..1" />
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wallet">
+        <PropertyRef Name="wal_id" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="wal_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Wallet">
+    <End Role="Wallet" Type="Self.Wallet" Multiplicity="0..1" />
+    <End Role="MarketSquare" Type="Self.MarketSquare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Wallet">
+        <PropertyRef Name="wal_id" />
+      </Principal>
+      <Dependent Role="MarketSquare">
+        <PropertyRef Name="wal_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="pBuyStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stockName" Type="varchar" Mode="In" />
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="stockCountBuy" Type="int" Mode="In" />
+    <Parameter Name="mark_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pCreateBuyTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="numberBuyStock" Type="int" Mode="In" />
+    <Parameter Name="stock_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pCreateSellTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="numberSellStock" Type="int" Mode="In" />
+    <Parameter Name="stock_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pStockEmission" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_stock" Type="int" Mode="In" />
+    <Parameter Name="setNumberStocks" Type="int" Mode="In" />
+    <Parameter Name="setStockPrice" Type="money" Mode="In" />
+  </Function>
+  <EntityContainer Name="StockExchangeModelStoreContainer">
+    <EntitySet Name="BuyingSelling" EntityType="Self.BuyingSelling" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MarketSquare" EntityType="Self.MarketSquare" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockName" EntityType="Self.StockName" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wallet" EntityType="Self.Wallet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BuyingSelling" Association="Self.FK_BuyingSelling">
+      <End Role="BuyingSelling" EntitySet="BuyingSelling" />
+      <End Role="MarketSquare" EntitySet="MarketSquare" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock" Association="Self.FK_Stock">
+      <End Role="Stock" EntitySet="Stock" />
+      <End Role="MarketSquare" EntitySet="MarketSquare" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockName" Association="Self.FK_StockName">
+      <End Role="StockName" EntitySet="StockName" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Wallet" Association="Self.FK_User_Wallet">
+      <End Role="Wallet" EntitySet="Wallet" />
+      <End Role="UserTable" EntitySet="UserTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Wallet" Association="Self.FK_Wallet">
+      <End Role="Wallet" EntitySet="Wallet" />
+      <End Role="MarketSquare" EntitySet="MarketSquare" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

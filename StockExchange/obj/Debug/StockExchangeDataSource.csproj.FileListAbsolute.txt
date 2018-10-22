@@ -1,0 +1,10 @@
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\bin\Debug\StockExchange.dll.config
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\bin\Debug\StockExchange.dll
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\bin\Debug\StockExchange.pdb
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\bin\Debug\EntityFramework.dll
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\bin\Debug\EntityFramework.xml
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\obj\Debug\StockExchangeDataSource.csprojResolveAssemblyReference.cache
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\obj\Debug\StockExchange.dll
+C:\Users\m.juranek\documents\visual studio 2015\Projects\StockExchange\StockExchange\obj\Debug\StockExchange.pdb

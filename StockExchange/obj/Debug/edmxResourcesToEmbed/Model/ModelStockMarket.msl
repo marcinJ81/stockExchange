@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StockExchangeModelStoreContainer" CdmEntityContainer="StockExchangeEntities">
+    <EntitySetMapping Name="BuyingSelling">
+      <EntityTypeMapping TypeName="StockExchangeModel.BuyingSelling">
+        <MappingFragment StoreEntitySet="BuyingSelling">
+          <ScalarProperty Name="bs_id" ColumnName="bs_id" />
+          <ScalarProperty Name="bs_action" ColumnName="bs_action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarketSquare">
+      <EntityTypeMapping TypeName="StockExchangeModel.MarketSquare">
+        <MappingFragment StoreEntitySet="MarketSquare">
+          <ScalarProperty Name="mark_id" ColumnName="mark_id" />
+          <ScalarProperty Name="stock_id" ColumnName="stock_id" />
+          <ScalarProperty Name="wal_id" ColumnName="wal_id" />
+          <ScalarProperty Name="mark_numberOfShares" ColumnName="mark_numberOfShares" />
+          <ScalarProperty Name="mark_aktywny" ColumnName="mark_aktywny" />
+          <ScalarProperty Name="mark_sharePriceBuy" ColumnName="mark_sharePriceBuy" />
+          <ScalarProperty Name="bs_id" ColumnName="bs_id" />
+          <ScalarProperty Name="mark_sharePriceSell" ColumnName="mark_sharePriceSell" />
+          <ScalarProperty Name="mark_dataStart" ColumnName="mark_dataStart" />
+          <ScalarProperty Name="mark_dataEnd" ColumnName="mark_dataEnd" />
+          <ScalarProperty Name="mark_TransactionPrice" ColumnName="mark_TransactionPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock">
+      <EntityTypeMapping TypeName="StockExchangeModel.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="stock_id" ColumnName="stock_id" />
+          <ScalarProperty Name="stockN_id" ColumnName="stockN_id" />
+          <ScalarProperty Name="stock_maxCount" ColumnName="stock_maxCount" />
+          <ScalarProperty Name="stock_minCount" ColumnName="stock_minCount" />
+          <ScalarProperty Name="stock_count" ColumnName="stock_count" />
+          <ScalarProperty Name="stock_aktywny" ColumnName="stock_aktywny" />
+          <ScalarProperty Name="stock_pricie" ColumnName="stock_pricie" />
+          <ScalarProperty Name="stock_date" ColumnName="stock_date" />
+          <ScalarProperty Name="stock_priceOne" ColumnName="stock_priceOne" />
+          <ScalarProperty Name="stock_seria" ColumnName="stock_seria" />
+          <ScalarProperty Name="stock_priceBuy" ColumnName="stock_priceBuy" />
+          <ScalarProperty Name="stock_pricaeSell" ColumnName="stock_pricaeSell" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockName">
+      <EntityTypeMapping TypeName="StockExchangeModel.StockName">
+        <MappingFragment StoreEntitySet="StockName">
+          <ScalarProperty Name="stockN_id" ColumnName="stockN_id" />
+          <ScalarProperty Name="stockN_name" ColumnName="stockN_name" />
+          <ScalarProperty Name="stockN_aktywny" ColumnName="stockN_aktywny" />
+          <ScalarProperty Name="stockN_fullName" ColumnName="stockN_fullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTable">
+      <EntityTypeMapping TypeName="StockExchangeModel.UserTable">
+        <MappingFragment StoreEntitySet="UserTable">
+          <ScalarProperty Name="usr_id" ColumnName="usr_id" />
+          <ScalarProperty Name="usr_name" ColumnName="usr_name" />
+          <ScalarProperty Name="usr_sname" ColumnName="usr_sname" />
+          <ScalarProperty Name="usr_login" ColumnName="usr_login" />
+          <ScalarProperty Name="usr_pass" ColumnName="usr_pass" />
+          <ScalarProperty Name="usr_date" ColumnName="usr_date" />
+          <ScalarProperty Name="usr_aktywny" ColumnName="usr_aktywny" />
+          <ScalarProperty Name="wal_id" ColumnName="wal_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wallet">
+      <EntityTypeMapping TypeName="StockExchangeModel.Wallet">
+        <MappingFragment StoreEntitySet="Wallet">
+          <ScalarProperty Name="wal_id" ColumnName="wal_id" />
+          <ScalarProperty Name="wal_aktywny" ColumnName="wal_aktywny" />
+          <ScalarProperty Name="wal_numberOfShares" ColumnName="wal_numberOfShares" />
+          <ScalarProperty Name="wal_MoneyLimit" ColumnName="wal_MoneyLimit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pBuyStock" FunctionName="StockExchangeModel.Store.pBuyStock" />
+    <FunctionImportMapping FunctionImportName="pCreateBuyTransaction" FunctionName="StockExchangeModel.Store.pCreateBuyTransaction" />
+    <FunctionImportMapping FunctionImportName="pCreateSellTransaction" FunctionName="StockExchangeModel.Store.pCreateSellTransaction" />
+    <FunctionImportMapping FunctionImportName="pStockEmission" FunctionName="StockExchangeModel.Store.pStockEmission" />
+  </EntityContainerMapping>
+</Mapping>
