@@ -89,6 +89,8 @@
     <Compile Include="StoredProcedures\BuyTransaction.cs" />
     <Compile Include="StoredProcedures\SellTransaction.cs" />
     <Compile Include="StoredProcedures\StcokEmission.cs" />
+    <Compile Include="View\createView\MarketSquareDataSource.cs" />
+    <Compile Include="View\ViewMarketSquare.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
