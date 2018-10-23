@@ -85,10 +85,12 @@
       <DependentUpon>ModelStockMarket.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoredProcedures\BuySellStock.cs" />
+    <Compile Include="StoredProcedures\BuyTransaction.cs" />
+    <Compile Include="StoredProcedures\SellTransaction.cs" />
+    <Compile Include="StoredProcedures\StcokEmission.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StoredProcedures\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <EntityDeploy Include="Model\ModelStockMarket.edmx">
