@@ -18,3 +18,13 @@ C:\Users\m.juranek\Documents\VS_2015\StockExchange\StockExchange\bin\Debug\Entit
 C:\Users\m.juranek\Documents\VS_2015\StockExchange\StockExchange\obj\Debug\StockExchangeDataSource.csprojResolveAssemblyReference.cache
 C:\Users\m.juranek\Documents\VS_2015\StockExchange\StockExchange\obj\Debug\StockExchange.dll
 C:\Users\m.juranek\Documents\VS_2015\StockExchange\StockExchange\obj\Debug\StockExchange.pdb
+N:\Gielda\StockExchange\StockExchange\bin\Debug\StockExchange.dll.config
+N:\Gielda\StockExchange\StockExchange\bin\Debug\StockExchange.dll
+N:\Gielda\StockExchange\StockExchange\bin\Debug\StockExchange.pdb
+N:\Gielda\StockExchange\StockExchange\bin\Debug\EntityFramework.dll
+N:\Gielda\StockExchange\StockExchange\bin\Debug\EntityFramework.SqlServer.dll
+N:\Gielda\StockExchange\StockExchange\bin\Debug\EntityFramework.xml
+N:\Gielda\StockExchange\StockExchange\bin\Debug\EntityFramework.SqlServer.xml
+N:\Gielda\StockExchange\StockExchange\obj\Debug\StockExchangeDataSource.csprojResolveAssemblyReference.cache
+N:\Gielda\StockExchange\StockExchange\obj\Debug\StockExchange.dll
+N:\Gielda\StockExchange\StockExchange\obj\Debug\StockExchange.pdb

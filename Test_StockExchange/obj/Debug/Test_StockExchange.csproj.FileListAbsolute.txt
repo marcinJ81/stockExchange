@@ -18,3 +18,17 @@ C:\Users\m.juranek\Documents\VS_2015\StockExchange\Test_StockExchange\bin\Debug\
 C:\Users\m.juranek\Documents\VS_2015\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.csprojResolveAssemblyReference.cache
 C:\Users\m.juranek\Documents\VS_2015\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.dll
 C:\Users\m.juranek\Documents\VS_2015\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.pdb
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\NUnit3.TestAdapter.dll
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\NUnit3.TestAdapter.pdb
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.engine.dll
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.engine.api.dll
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\Mono.Cecil.dll
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\Test_StockExchange.dll
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\Test_StockExchange.pdb
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.framework.dll
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.framework.pdb
+N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.framework.xml
+N:\Gielda\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.csprojResolveAssemblyReference.cache
+N:\Gielda\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.dll
+N:\Gielda\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.pdb
