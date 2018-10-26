@@ -46,8 +46,6 @@ namespace StockExchangeMVC.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-                kernel.Bind<IViewWallet>().To<ViewWallet>();
-                kernel.Bind<IViewMarketSquare>().To<ViewMarketSquare>();
                 RegisterServices(kernel);
 
                 return kernel;
@@ -65,6 +63,8 @@ namespace StockExchangeMVC.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IViewWallet>().To<ViewWallet>();
+            kernel.Bind<IViewMarketSquare>().To<ViewMarketSquare>();
         }        
     }
 }

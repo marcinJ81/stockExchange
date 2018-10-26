@@ -1,0 +1,33 @@
+﻿@model IEnumerable<StockExchange.BaseView.createViewSource.MarketSquareDataSource>
+
+@{
+    ViewBag.Title = "MarketSquare";
+}
+
+<h2>Rynek Akcji</h2>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <table class="table">
+            <tr>
+                <th>Nazwa</th>
+                <th>Ilość</th>
+                <th>Cena Zakupu</th>
+                <th>Cena sprzedaży</th>
+                <th>Status</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>item.stockName</td>
+                    <td>item.stockNumber</td>
+                    <td>item.stockPriceNumber</td>
+                    <td>item.stockPriceSell</td>
+                    <td>item.transactionStatus</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+

@@ -29,6 +29,5 @@ N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\Microsoft.VisualStudio.Qual
 N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.framework.dll
 N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.framework.pdb
 N:\Gielda\StockExchange\Test_StockExchange\bin\Debug\nunit.framework.xml
-N:\Gielda\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.csprojResolveAssemblyReference.cache
 N:\Gielda\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.dll
 N:\Gielda\StockExchange\Test_StockExchange\obj\Debug\Test_StockExchange.pdb
