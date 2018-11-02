@@ -16,7 +16,7 @@ namespace StockExchangeMVC
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "StockMarket", action = "MarketSquare", id = UrlParameter.Optional }
+                defaults: new { controller = "MarketSquare", action = "MarketSquare", id = UrlParameter.Optional }
             );
         }
     }

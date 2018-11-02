@@ -152,6 +152,8 @@
     <Content Include="SQL_To_Test\cursorpBuySellStock.sql" />
     <Content Include="SQL_To_Test\Excute_Example_Buy_Trnasaction.sql" />
     <Content Include="SQL_To_Test\Excute_Example_Emission.sql" />
+    <Content Include="SQL_To_Test\fullBaseScriptGielda.sql" />
+    <Content Include="SQL_To_Test\fullBaseScriptGielda_29_10_2019.sql" />
     <Content Include="SQL_To_Test\GroupBy_Stock.sql" />
     <Content Include="Model\ModelStockMarket.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -163,6 +165,7 @@
       <DependentUpon>ModelStockMarket.edmx</DependentUpon>
       <LastGenOutput>ModelStockMarket.cs</LastGenOutput>
     </Content>
+    <Content Include="SQL_To_Test\pBuySelStock_addingPriceStatus.sql" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

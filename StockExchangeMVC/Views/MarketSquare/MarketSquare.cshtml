@@ -1,4 +1,4 @@
-﻿@model IEnumerable<StockExchange.BaseView.createViewSource.MarketSquareDataSource>
+﻿@model List<StockExchange.BaseView.createViewSource.MarketSquareDataSource>
 
 @{
     ViewBag.Title = "MarketSquare";
@@ -19,11 +19,11 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>item.stockName</td>
-                    <td>item.stockNumber</td>
-                    <td>item.stockPriceNumber</td>
-                    <td>item.stockPriceSell</td>
-                    <td>item.transactionStatus</td>
+                    <td>@item.stockName</td>
+                    <td>@item.stockNumber</td>
+                    <td>@item.stockPriceBuy</td>
+                    <td>@item.stockPriceSell</td>
+                    <td>@item.transactionStatus</td>
                 </tr>
             }
 

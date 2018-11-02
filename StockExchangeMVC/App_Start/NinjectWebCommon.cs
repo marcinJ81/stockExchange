@@ -12,6 +12,8 @@ namespace StockExchangeMVC.App_Start
     using Ninject.Web.Common;
     using StockExchange.BaseView;
     using StockExchange.View;
+    using StockExchange.Model;
+    using StockExchange.BaseView.createViewProcedure;
 
     public static class NinjectWebCommon 
     {
@@ -65,6 +67,8 @@ namespace StockExchangeMVC.App_Start
         {
             kernel.Bind<IViewWallet>().To<ViewWallet>();
             kernel.Bind<IViewMarketSquare>().To<ViewMarketSquare>();
+            kernel.Bind<IWalletDataSource>().To<WalletViewCreate>();
+            kernel.Bind<IMarketSquareDataSource>().To<MarketSquareViewCreate>();
         }        
     }
 }
